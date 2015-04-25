@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>GSL - Home</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Add custom CSS here -->
+    <link href="css/shop-homepage.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="home.html"><span class="glyphicon glyphicon-home"></span></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="about.html">About</a>
+                    </li>
+                    <li><a href="services.html">Services</a>
+                    </li>
+                    <li><a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            <form class="navbar-form navbar-right" role="search" method="post" action="results.php">
+                <div class="form-group">
+                    <input type="text" name="query" class="form-control" placeholder="Search products...">
+                </div>
+                <button id="submitSearch" type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span>
+                </button>
+            </form>
+            </div>
+            <!-- /.navbar-collapse -->
+         
+
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-3">
+                <img src="logo.jpg">
+                 <center><h5>Serving Your Document Needs</h5></center>
+                 <br><br><br><br><br><br><br><br>
+                <div class="list-group">
+                    <span class="glyphicon glyphicon-phone-alt"></span>  &nbsp;+44 020 3174 8056 <br> <br>
+                    <span class="glyphicon glyphicon-print"></span>  &nbsp;+44 020 3174 8057 <br> <br>
+                    <span class="glyphicon glyphicon-envelope"></span>  &nbsp;info@gslphotocopiers.org.uk <br> <br>
+                    <span class="glyphicon glyphicon-lock"></span>
+                   &nbsp;Golden Crescent Industrial Estate, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Golden Crescent, Hayes
+                    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Middlesex, UB3 1AQ
+            </div>
+               
+            </div>
+
+            <div class="col-md-9">
+
+                <div class="row carousel-holder">
+
+                    <div class="col-md-12">
+                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <img class="slide-image" src="img/img1.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image" src="img/img6.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image" src="img/img7.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image" src="img/img4.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image" src="img/img5.jpeg" alt="">
+                                </div>
+                            </div>
+                            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                            </a>
+                            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <script type="text/javascript">
+                    function MM_swapImgRestore() { //v3.0
+                      var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+                    }
+                    function MM_preloadImages() { //v3.0
+                      var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+                        var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+                        if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+                    }
+
+                    function MM_findObj(n, d) { //v4.01
+                      var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+                        d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+                      if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+                      for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+                      if(!x && d.getElementById) x=d.getElementById(n); return x;
+                    }
+
+                    function MM_swapImage() { //v3.0
+                      var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+                       if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+                    }
+                </script>
+
+                <div class="row">
+
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <a href="products.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Consumables','','img/consumablesrollover.jpg',1)"><img src="img/block1.jpg" name="Consumables" width="300" height="261" border="0" id="Consumables" /></a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Solutions','','img/solutionsrollover.jpg',1)"><img src="img/block2.jpg" name="Solutions" width="300" height="300" border="0" id="Solutions" /></a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Support','','img/supportrollover.jpg',1)"><img src="img/block3.jpg" name="Support" width="300" height="261" border="0" id="Support" /></a>
+                        </div>
+                    </div>
+
+                   
+<!-- TUTORIAL
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <h4><a href="#">Like this template?</a>
+                        </h4>
+                        <p>If you like this template, then check out <a target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">this tutorial</a> on how to build a working review system for your online store!</p>
+                        <a class="btn btn-primary" target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">View Tutorial</a>
+                    </div>
+
+ -->
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+    <div class="container">
+
+        <hr>
+
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Glebe Services Ltd. 2015</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- JavaScript -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+</body>
+
+</html>
