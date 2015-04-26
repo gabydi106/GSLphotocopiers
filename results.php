@@ -70,15 +70,15 @@
 
             <div class="col-md-3">
                 <img src="logo.jpg">
-                 <h5>Serving Your Document Needs</h5>
+                 <center><h5>Serving Your Document Needs</h5></center>
                  <br><br><br><br><br><br><br><br>
                 <div class="list-group">
-                    <span class="glyphicon glyphicon-phone-alt"></span>  +44 020 3174 8056 <br> <br>
-                    <span class="glyphicon glyphicon-print"></span>  +44 020 3174 8057 <br> <br>
-                    <span class="glyphicon glyphicon-envelope"></span>  info@gslphotocopiers.org.uk <br> <br>
+                    <span class="glyphicon glyphicon-phone-alt"></span>  &nbsp;+44 020 3174 8056 <br> <br>
+                    <span class="glyphicon glyphicon-print"></span>  &nbsp;+44 020 3174 8057 <br> <br>
+                    <span class="glyphicon glyphicon-envelope"></span>  &nbsp;info@gslphotocopiers.org.uk <br> <br>
                     <span class="glyphicon glyphicon-lock"></span>
-                    Golden Crescent Industrial Estate, Golden Crescent, Hayes
-                    <br>  Middlesex, UB3 1AQ
+                   &nbsp;Golden Crescent Industrial Estate, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Golden Crescent, Hayes
+                    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Middlesex, UB3 1AQ
             </div>
                
             </div>
@@ -87,40 +87,7 @@
 
                 <div class="row carousel-holder">
 
-                    <div class="col-md-12">
-                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                            <ol class="carousel-indicators">
-                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                                <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-                                <li data-target="#carousel-example-generic" data-slide-to="4"></li>
-                            </ol>
-                            <div class="carousel-inner">
-                                <div class="item active">
-                                    <img class="slide-image" src="img/img1.jpg" alt="">
-                                </div>
-                                <div class="item">
-                                    <img class="slide-image" src="img/img6.jpg" alt="">
-                                </div>
-                                <div class="item">
-                                    <img class="slide-image" src="img/img7.jpg" alt="">
-                                </div>
-                                <div class="item">
-                                    <img class="slide-image" src="img/img4.jpg" alt="">
-                                </div>
-                                <div class="item">
-                                    <img class="slide-image" src="img/img5.jpeg" alt="">
-                                </div>
-                            </div>
-                            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-                                <span class="glyphicon glyphicon-chevron-left"></span>
-                            </a>
-                            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-                                <span class="glyphicon glyphicon-chevron-right"></span>
-                            </a>
-                        </div>
-                    </div>
+        
 
                 </div>
 
@@ -138,34 +105,34 @@
 							}
 
 							mysqli_select_db($con,"gsl");
-							$sql="SELECT * FROM products WHERE ProductName like '%$q' or ProductName like '$q%' or ProductName like '% $q %'";
+							$sql="SELECT * FROM products WHERE ProductName LIKE '%$q' or ProductName LIKE '$q%' or ProductName LIKE '% $q %'";
 							$result = mysqli_query($con,$sql);
 
 							if (!$result) {
 							    printf("Error: %s\n", mysqli_error($con));
 							    exit();
 							}
-
-							echo "<table border='1' class='table table-striped'>
+							echo "<div class='table-responsive'>";
+							echo "<table border='1' class='table'>
 							<tr>
-							<th>Manufacturer</th>
+							
 							<th>Product Name</th>
 							<th>Picture</th>
-							<th>MSRP</th>
+							<th>Features</th>
 							</tr>";
 
 							while($row = mysqli_fetch_array($result)) {
 							  echo "<tr>";
-							  echo "<td>" . $row['ProductBrand'] . "</td>";
+				
 							  echo "<td>" . $row['ProductName'] . "</td>";
 							  echo "<td>" . $row['ProductImgPath'] . "</td>";
-							  echo "<td>" . $row['ProductPrice'] . "</td>";
+							  echo "<td>" . $row['ProductDesc'] . "</td>";
 							  
 
 							  echo "</tr>";
 							}
 							echo "</table>";
-
+							echo "</div>";		
 							mysqli_close($con);
 						}
 					?>
