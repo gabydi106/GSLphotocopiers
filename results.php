@@ -1,10 +1,3 @@
-<html>
-<body>
-
-
-</body>
-</html>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -22,6 +15,8 @@
 
     <!-- Add custom CSS here -->
     <link href="css/shop-homepage.css" rel="stylesheet">
+	
+	<link href="css/jquery.dataTables.css" rel="stylesheet">
 
 </head>
 
@@ -113,24 +108,23 @@
 							    exit();
 							}
 							echo "<div class='table-responsive'>";
-							echo "<table border='1' class='table'>
+							echo "<table class='table' id='example'>
+							<thead>
 							<tr>
-							
 							<th>Product Name</th>
-							<th>Picture</th>
 							<th>Features</th>
+							<th>Picture</th>
+							</thead>
 							</tr>";
-
+							echo "<tbody>";
 							while($row = mysqli_fetch_array($result)) {
 							  echo "<tr>";
-				
 							  echo "<td>" . $row['ProductName'] . "</td>";
-							  echo "<td>" . $row['ProductImgPath'] . "</td>";
 							  echo "<td>" . $row['ProductDesc'] . "</td>";
-							  
-
+							  echo "<td>" . $row['ProductImgPath'] . "</td>";
 							  echo "</tr>";
 							}
+							echo "</tbody>";
 							echo "</table>";
 							echo "</div>";		
 							mysqli_close($con);
@@ -163,9 +157,16 @@
     <!-- /.container -->
 
     <!-- JavaScript -->
-    <script src="js/jquery-1.10.2.js"></script>
+   
+	<script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/bootstrap.js"></script>
-
+	<script src="js/jquery.dataTables.min.js"></script>
+	<script src="js/dataTables.bootstrap.js"></script>
+	<script>
+		$(document).ready(function() {
+		$('#example').dataTable();
+		} );
+	</script>
 </body>
 
 </html>
